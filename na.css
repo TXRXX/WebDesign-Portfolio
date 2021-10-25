@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+nav {
+    background-color: rgba(14, 13, 13, 1);
+}
+
+h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+nav::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 900;
+    line-height: 70px;
+    padding-left: 60px;
+
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul li {
+    float: left;
+    display: inline-block;
+    background: rgba(14, 13, 13, 0.8);
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 16px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    /* border: 1px solid white; */
+    color: rgba(14, 13, 13, 0.5);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    /* box-shadow: 0 0 1px #33ffff; */  
+    transition: 0.7s all;   
+}
+
+nav ul ul li a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(14, 13, 13, 0);
+}
+
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    /* border-top: 1px solid white; */
+    opacity: 0;
+    visibility: hidden;
+    transition: top .5s;
+}
+
+nav ul ul ul {
+    border-top: none;
+}
+
+nav ul li:hover > ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgb(46, 46, 46);
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+.show, .icon, input {
+    display: none;
+}
+
+@media all and (max-width: 968px){
+    nav ul {
+        margin-right: 0px;
+        float: left;
+    }
+    nav .logo {
+        padding-left: 30px;
+        width: 100%;
+    }
+    nav ul li, nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+    nav ul ul {
+        top: 70px;
+        position: static;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav ul ul ul li {
+        position: static;
+    }
+    nav ul ul li {
+        border-bottom: 0px;
+    }
+    nav ul ul {
+        padding-left: 40px;
+    }
+    nav ul li a:hover {
+        border-radius: 0;
+    }
+    nav ul ul ul a {
+        padding-left: 60px;
+        border-left: 1px solid white;
+        color: rgb(255, 255, 255);
+    }
+    nav ul ul ul a:hover {
+        color: rgb(201, 201, 201);
+        border-left: 1px solid rgb(255, 255, 255);
+    }
+    .show {
+        display: block;
+        color: white;
+        font-size: 16px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    .show:hover {
+        color: rgb(201, 201, 201);
+    }
+    .icon {
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 25px;
+    }
+    nav ul li a:hover {
+
+    }
+    .show + a, ul {
+        display: none;
+    }
+    [id^=btn]:checked + ul {
+        display: block;
+    }
+   
+}
+
+/* Container */
+.content {
+    max-width: 1000px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    border: 1px solid black;
+    padding: 30px;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+}
+/* Paragraph in cont. */
+.content p{
+    color: black;
+    font-size: 18px;
+    margin-top: 20px;
+    line-height: 50px;
+    margin-bottom: 60px;
+}
+.content h3 {
+    color: black;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+/* Button back to home */
+.content .back {
+    background-color: black;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    transition: .3s all;
+}
+/* Button when hover */
+.content .back:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
