@@ -4,6 +4,10 @@
     font-family: 'IBM Plex Sans Thai', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .wrapper-top {
     display: flex;
 }
@@ -20,10 +24,18 @@
     height: 100vh;
     display: flex;
     flex: 1;
-    background-image: url(./img/bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-image: url(./img/bg.jpg); */
+}
+
+.image-container {
+    width: 100%;
+    position: relative;
+    background-image: url(./img/me.JPG);
     background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    
 }
 
 .text-left {
@@ -50,17 +62,27 @@
 	top: 50%;
 	left: 10%;
 	transform: translateY(-50%);
-	z-index: 1;
+	z-index: 0;
 	white-space: nowrap;
     color: white;
     font-weight: 700;
-    overflow-x: hidden;
 }
 
 .on-dark {
-    color: rgb(255, 0, 0);
+    /* color: rgb(255, 0, 0); */
+    color:transparent;
+    /* color: black; */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    z-index: 2;
 }
 span {
     position: relative;
     display: block;
+}
+
+.line {
+    width: 33%;
+    border-top: 2px solid white;
+    margin: 5% 0;
 }
