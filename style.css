@@ -12,7 +12,7 @@
 
 body {
     background-color: rgb(255, 255, 255);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 /* NAVBAR */
@@ -210,14 +210,16 @@ nav ul ul ul li {
    
 }
 
+
 /* BG IMAGE */
 .top {
-    background:linear-gradient(-90deg, rgba(0,212,255,0) 0%, rgb(255, 255, 255) 100%), url('img/bg.jpg'); /*พื้นหลังและไล่สี*/
-    background:-webkit-linear-gradient(-90deg, rgba(0,212,255,0) 0%, rgb(255, 255, 255) 100%), url('img/bg.jpg'); /*พื้นหลังและไล่สี*/
+    background-image: url(./img/bg.jpg);
+    /* background:linear-gradient(-90deg, rgba(0,212,255,0) 0%, rgb(255, 255, 255) 100%), url('img/bg.jpg');  */
+    /* background:-webkit-linear-gradient(-90deg, rgba(0,212,255,0) 0%, rgb(255, 255, 255) 100%), url('img/bg.jpg');  */
     background-repeat: no-repeat; /*ไม่แสดงผลซ้ำ*/
     background-position: center; /*แสดงผลตรงกลาง*/
     background-size: cover; /*แสดงผลครอบคลุม*/
-    width: 100vw; /*ความกว้าง*/
+    width: 100%; /*ความกว้าง*/
     height: 100vh; /*ความสูง*/
     z-index: 0;
 }
@@ -225,30 +227,31 @@ nav ul ul ul li {
 /* TEXT ON BG */
 .des {
     position: relative;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 5vw;
     top: 60%;
     margin-left: 60px;
     letter-spacing: 20px;
+    text-shadow: 3px 3px 10px rgb(0, 0, 0, 0.4);
 }
 
 /* TEXT ON BG */
 .des2 {
     position: relative;
-    color: black;
+    color: white;
     top: 60%;
     margin-left: 60px;
     font-size: 2.3vw;
+    text-shadow: 3px 3px 10px rgb(0, 0, 0, 0.4);
 }
 
 /* box Button Start */
 .btn {
-    width: 100vw; /*ความกว้าง*/
+    width: 100%; /*ความกว้าง*/
     height: 2.5em; /*ความสูง*/
-    display: flex; /*แสดงผลยืดหยุ่น*/
-    justify-content: center; /*อยู่ตรงกลาง*/
-    left: 50%;
-    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    /* left: 50%; */
 }
 
 /* Button Start */
@@ -275,4 +278,8 @@ nav ul ul ul li {
     border: 1px solid black;
     color: black;
     
+}
+
+.impress {
+    height: 100vh;
 }

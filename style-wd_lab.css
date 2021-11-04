@@ -14,7 +14,10 @@ body {
     overflow: hidden;
     overflow-y: scroll;
 }
-
+.lab1, .lab2, .lab3, .lab4,
+.lab5, .lab6, .lab7, .lab8 {
+    font-size: 1rem;
+}
 nav {
     background-color: rgba(14, 13, 13, 1);
 }
