@@ -5,21 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" href="./style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <title>Home</title>
     </head>
     <body>
+        <div id="nav-placeholder">
+
+        </div>
         <link rel="import" href="./nav.html">
         
         <div class="top">
             <h1 class="des">CHANON'S BLOG</h1>
             <h2 class="des2">GOOD TO SEE YOU IN MY WEBSITE.</h2>
         </div>
-        <div class="btn">
-            <a class="start" href="./wd_lab.html">LET'S SEE MY SKILLS > ></a>
-        </div>
 
         <div class="impress">
             
         </div>
     </body>
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("nav.html");
+        });
+    </script>
 </html>
