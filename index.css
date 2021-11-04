@@ -22,6 +22,45 @@
     flex: 1;
     background-image: url(./img/bg.jpg);
     background-size: cover;
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
+.text-left {
+    position: absolute;
+    color: white;
+    font-size: 7rem;
+    font-weight: 700;
+    top: 30%;
+    left: 5%;
+    line-height: 8rem;
+}
+
+.impress {
+    height: 100vh;
+}
+
+.section-title {
+	margin: 0;
+	font-size: 7rem;
+	width: 100%;
+	/* text-align: center; */
+    line-height: 8rem;
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	z-index: 1;
+	white-space: nowrap;
+    color: white;
+    font-weight: 700;
+    overflow-x: hidden;
+}
+
+.on-dark {
+    color: rgb(255, 0, 0);
+}
+span {
+    position: relative;
+    display: block;
+}
