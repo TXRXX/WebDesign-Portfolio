@@ -173,9 +173,8 @@ sup {
         font-size: 3rem;
         line-height: 3rem;
     }
-    .text-impress {
+    .inside-text-impress {
         font-size: 1.5rem;
-        padding: 0;
     }
     .name{
         font-size: 2rem;
@@ -195,6 +194,21 @@ sup {
         -webkit-text-stroke-color: white;
     }
     
+}
+
+@media screen and (max-width: 900px) {
+    .inside-text-impress {
+        font-size: 3rem;
+    }
+    .cool-text {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .inside-text-impress {
+        font-size: 3rem;
+    }
 }
 
 @keyframes anim-type {
