@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;900&display=swap');
+
+/* Root */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+    scroll-behavior: smooth;
+    background-repeat: ;
+}
+
+/* Nav Link Color */
+.nav-link {
+    color: black;
+}
+
+/* Nav Link When Hover */
+.nav-link:hover {
+    color: rgb(65, 65, 65);
+}
+
+/* Size to support responsive */
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Header (with logo name) */
+header {
+    background-color: black;
+    color: white;
+    font-size: 2vw;
+    width: 100%;
+    padding: 2vw;
+    font-weight: bold;
+}
+
+/* Paragraph */
+.col-sm p {
+    text-indent: 2vw;
+}
+
+/* Row */
+.row {
+    margin-top: 15px;
+}
+
+/* Image display */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    padding-bottom: 10px;
+}
+
+/* Container set margin */
+.container {
+    margin-top: 1vw;
+}
+
+/* Image class In 10 Check-In */
+.ch {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* Bottom all pages */
+bottom {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 3vw;
+    bottom: 0;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 1.3vw;
+    font-weight: 700;
+}
+/* Link in bottom */
+bottom a:link {
+    display: block;
+    color: rgb(0, 0, 0);
+    margin: auto;
+}
+bottom a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+bottom a:visited {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+/* Container in home */
+.home {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+}
+
+/* Image bg in home */
+.home .top {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    filter: blur(2px);
+}
+
+/* Text In home */
+.toptext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    text-align: center;
+    color: white;
+    font-size: 8vw;
+    font-weight: 900;
+    text-shadow: 0 3px 10px rgb(0, 0, 0, 0.8);
+}

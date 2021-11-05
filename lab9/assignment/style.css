@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+/* Root */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    background-color: rgba(14, 13, 13, 1);
+}
+
+/* LOGO IN NAV */
+h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+/* After NAV */
+nav::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+/* LOGO (CHANON P.) */
+nav .logo {
+    float: left;
+    color: white;
+    font-size: 27px;
+    font-weight: 900;
+    line-height: 70px;
+    padding-left: 60px;
+
+}
+
+/* Element ul in nav */
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+/* Element li in nav */
+nav ul li {
+    float: left;
+    display: inline-block;
+    background: rgba(14, 13, 13, 0.8);
+    margin: 0 5px;
+}
+
+/* a in nav */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 16px;
+    padding: 8px 15px;
+}
+
+/* style when hover on links */
+nav ul li a:hover {
+    /* border: 1px solid white; */
+    color: rgba(14, 13, 13, 0.5);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    /* box-shadow: 0 0 1px #33ffff; */  
+    transition: .7s all;   
+}
+
+/* style when hover on links */
+nav ul ul li a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgba(14, 13, 13, 0);
+}
+
+/* ul in nav */
+nav ul ul {
+    position: absolute;
+    top: 90px;
+    /* border-top: 1px solid white; */
+    opacity: 0;
+    visibility: hidden;
+    transition: top .5s;
+}
+
+nav ul ul ul {
+    border-top: none;
+}
+
+
+nav ul li:hover > ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgb(46, 46, 46);
+    
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -70px;
+    left: 150px;
+    
+}
+
+/* hide elements */
+.show, .icon, input {
+    display: none;
+}
+
+/* Reponsive */
+@media all and (max-width: 968px){
+    nav ul {
+        margin-right: 0px;
+        float: left;
+    }
+    nav .logo {
+        padding-left: 30px;
+        width: 100%;
+    }
+    nav ul li, nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+    nav ul ul {
+        top: 70px;
+        position: static;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav ul ul ul li {
+        position: static;
+    }
+    nav ul ul li {
+        border-bottom: 0px;
+    }
+    nav ul ul {
+        padding-left: 40px;
+    }
+    nav ul li a:hover {
+        border-radius: 0;
+        cursor: pointer;
+    }
+    nav ul ul ul a {
+        padding-left: 60px;
+        border-left: 1px solid white;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+    nav ul ul ul a:hover {
+        color: rgb(201, 201, 201);
+        border-left: 1px solid rgb(255, 255, 255);
+    }
+    .show {
+        display: block;
+        color: white;
+        font-size: 16px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    .show:hover {
+        color: rgb(201, 201, 201);
+    }
+    .icon {
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 25px;
+    }
+    nav ul li a:hover {
+
+    }
+    .show + a, ul {
+        display: none;
+    }
+    [id^=btn]:checked + ul {
+        display: block;
+    }
+   
+}
+
+/* BG IMAGE */
+.top {
+    background:linear-gradient(-90deg, rgba(0,212,255,0) 0%, rgb(255, 255, 255) 100%), url('img/bg.jpg'); /*พื้นหลังและไล่สี*/
+    background:-webkit-linear-gradient(-90deg, rgba(0,212,255,0) 0%, rgb(255, 255, 255) 100%), url('img/bg.jpg'); /*พื้นหลังและไล่สี*/
+    background-repeat: no-repeat; /*ไม่แสดงผลซ้ำ*/
+    background-position: center; /*แสดงผลตรงกลาง*/
+    background-size: cover; /*แสดงผลครอบคลุม*/
+    width: 100vw; /*ความกว้าง*/
+    height: 100vh; /*ความสูง*/
+    z-index: 0;
+}
+
+/* TEXT ON BG */
+.des {
+    position: relative;
+    color: black;
+    font-size: 5vw;
+    top: 60%;
+    margin-left: 60px;
+    letter-spacing: 20px;
+}
+
+/* TEXT ON BG */
+.des2 {
+    position: relative;
+    color: black;
+    top: 60%;
+    margin-left: 60px;
+    font-size: 2.3vw;
+}
+
+/* box Button Start */
+.btn {
+    width: 100vw; /*ความกว้าง*/
+    height: 2.5em; /*ความสูง*/
+    display: flex; /*แสดงผลยืดหยุ่น*/
+    justify-content: center; /*อยู่ตรงกลาง*/
+    left: 50%;
+    margin-bottom: 5%;
+}
+
+/* Button Start */
+.btn .start {
+    position: relative;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-left: 42%; */
+    transition: .3s;
+    font-size: 1em;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+/* Hover Button */
+.start:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid black;
+    color: black;
+    
+}

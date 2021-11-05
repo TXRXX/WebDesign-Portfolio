@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html" charset="utf-8">
+        <title>Index</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: sans-serif; /* CSS Comment */
+                font-size: 0.8cm;
+            }
+            header, footer, section, article{
+                border: 1px solid gray;
+                margin: 5px;
+                margin-bottom: 15px;
+                padding: 8px;
+                background-color: white;
+            }
+            header, footer{
+                color: white;
+                background-color: darkblue;
+                margin-bottom: 5px;
+            }
+            section{
+                background-color: lightblue;
+            }
+            nav ul {
+                margin: 0;
+                padding: 0;
+            }
+            nav ul li{
+                display: inline;
+                margin: 5px;
+            }
+            header{
+                font-family: 'Times New Roman', 'Times, serif';
+                font-weight: bold;
+            }
+            myCode {
+                display: block;
+                background-color: #ddd;
+                padding: 50px;
+                font-size: 30px;
+            }
+            canvas{
+                border: 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <header><h1>Example 1 Lab 2 WDT</h1></header>
+
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Menu 1</li>
+                <li>Menu 2</li>
+                <li>Menu 3</li>
+            </ul>
+        </nav>
+
+        <section>
+            <h2>Section</h2>
+            <article>
+                <h3>Article</h3>
+                <p>content</p>
+                <select>
+                    <option value="">Jan-Mar</option>
+                    <option value="">Apr-Jun</option>
+                    <option value="">Jul-Sep</option>
+                    <option value="">Oct-Dec</option>
+                </select>
+
+                <input type="text" list="quarter_month">
+                <datalist id="quarter_month">
+                    <option value="Jan-Mar">
+                    <option value="Apr-Jun">
+                    <option value="Jul-Sep">
+                    <option value="Oct-Dec">
+                </datalist>
+
+                <!-- DOM - Document Object Model -->
+                <script>
+                    document.createElement("myCode")
+                </script>
+                <myCode>Adding New element to HTML</myCode>
+
+                <!-- Canvas -->
+                <canvas id="myCanvas" width="200" height="100">
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+                <script>
+                    var c = document.getElementById("myCanvas");
+                    var ctx = c.getContext("2d");
+                    ctx.fillStyle = "#FF0000";
+                    ctx.fillRect(0,0,150,75);
+                </script>
+
+                <canvas id="canvas1" width="200" height="100">
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+                <script>
+                    var d = document.getElementById("canvas1");
+                    var dtx = d.getContext("2d");
+                    dtx.moveTo(0, 0);
+                    dtx.lineTo(200,100);
+                    dtx.stroke();
+                </script>
+
+                <canvas id="canvas2" width="200" height="100">
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+                <script>
+                    var e = document.getElementById("canvas2");
+                    var etx = e.getContext("2d");
+                    etx.beginPath();
+                    etx.arc(95, 50, 40, 0, 2 * Math.PI);
+                    etx.stroke();
+                </script>
+
+                <canvas id="canvas3" width="200" height="100">
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+                <script>
+                    var f = document.getElementById("canvas3");
+                    var ftx = f.getContext("2d");
+                    ftx.font = "30px Arial";
+                    ftx.fillText("Hello World",10,50);
+                </script>
+
+                <video width="400" controls mute loop autoplay> <!-- [[poster]] Set Video Image Start -->
+                    <source src="">
+                </video>
+                <audio loop controls>
+                    <source src="">
+                </audio>
+            </article>
+            <article>
+                <h3>Article</h3>
+                <p>content</p>
+            </article>
+        </section>
+
+        <footer>
+            (C); 2021 WDT, All rights reserved.
+        </footer>
+
+
+
+    </body>
+</html>

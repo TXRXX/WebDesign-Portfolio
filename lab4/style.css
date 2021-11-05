@@ -1,0 +1,116 @@
+/* option + shift + f  */
+
+h1 {
+    color: rgb(0, 26, 255);
+}
+
+p {
+    /* color: red; */
+    text-align: center;
+    font-size: 40px;
+}
+
+
+/* ID Selector */
+
+p#green {
+    color: green;
+}
+
+
+/* Class Selector */
+
+p.purple {
+    color: purple;
+    font-size: 24px;
+}
+
+p.gold {
+    color: gold;
+    background-color: black;
+    border: 2px solid gold;
+    border-radius: 10px;
+}
+
+
+/* Contextual Selector */
+
+div p {
+    font-size: 32px;
+    font-weight: bold;
+    background-color: cadetblue;
+}
+
+div p span {
+    color: pink;
+}
+
+
+/* Grouping Selector */
+
+p.purple, p.gold {
+    font-family: monospace;
+    font-size: 64px;
+}
+
+h1, p, p.purple, p#green {
+    font-family: cursive;
+    font-weight: bold;
+}
+
+
+/* Pseudo Class */
+
+a:link {
+    color: purple;
+}
+
+a:visited {
+    color:yellow;
+}
+
+a:hover {
+    color: red;
+    background-color: pink;
+}
+
+a:active {
+    color: white;
+    background-color: black;
+}
+
+
+/* Pseudo Element */ 
+/* Old CSS p:...  |   CSS3 p::... */
+
+p::first-letter {
+    /* color: red; */
+    font-size: 80px;
+}
+
+p::first-line {
+    /* color: green; */
+}
+
+/* Star Symbol or :root */
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Cascading 
+    1.ทำงานอย่างเป็นลำดับ Last-in-First-out
+    2.ถ้าเจาะจงจะทำงานอิสระ
+    3.ระยะห่างของ CSS ที่ใกล้ที่สุด 1.inline > 2.internal > 3.external
+    4.ให้ความสำคัญ --> !important จะดึงใช้งานก่อน
+*/
+
+div.test p {
+    color: red;
+    color: gold;
+}
+
+p span {
+    font-size: 80px;
+    color: red !important;
+}

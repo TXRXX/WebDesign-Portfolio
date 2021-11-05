@@ -1,0 +1,89 @@
+.box1 {
+    width: 350px;
+    height:50px;
+    background-color: greenyellow;
+    border-bottom: solid green 15px;
+}
+
+.box2 {
+    font-size: 20px;
+    color: red;
+    width: 350px;
+    border: 5px solid red;
+    margin-top: 50px;
+}
+
+.box3 {
+    width: 350px;
+    color: red;
+    border-top: 15px double blue;
+    border-bottom: 15px dashed orange;
+    border-left: 5px outset green;
+    border-right: 5px inset red;
+    margin-top: 50px;
+}
+
+.box4 {
+    width: 250px;
+    background-color: paleturquoise;
+    margin: 10% 30% 10% 30%;
+    text-align: center;
+}
+
+.box5 {
+    width: 500px;
+    background-color: yellow;
+    color: red;
+    border: 3px solid red;
+    margin: 10%;
+    text-align: center;
+}
+
+.box6 {
+    width: 350px;
+    border: 15px solid blue;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box7 {
+    width: 500px;
+    background:green;
+    padding: 10px;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.box8 {
+    margin-top: 30px;
+    float: left;
+    width: 300px;
+    background-color: rgb(207, 207, 207);
+    border: 10px solid rgb(155, 155, 155);
+    padding: 10px;
+}
+
+.box9 {
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+    width: 300px;
+    background-color: rgb(207, 207, 207);
+    border: 10px solid rgb(155, 155, 155);
+    padding: 10px;
+}
+
+.box10 {
+    margin-top: 30px;
+    margin-left: 30px;
+    float: left;
+    width: 300px;
+    background-color: rgb(207, 207, 207);
+    border: 10px solid rgb(134, 160, 170);
+    padding: 10px;
+}

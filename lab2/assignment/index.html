@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <meta http-equiv="Content-type" content="text/html" charset="utf-8">
+        <head>
+            <title>Assignment2</title>
+            <!-- CSS -->
+            <style>
+                body{
+                    margin: 0;
+                    padding: 0;
+                }
+                header, footer{
+                    font-family: sans-serif;
+                    color: white;
+                    background-color: rgb(45, 94, 45);
+                    margin-bottom: 15px;
+                    padding: 8px;
+                }
+                nav ul{
+                    font-family: sans-serif;
+                    margin: 0;
+                    padding: 0;
+                }
+                nav ul li{
+                    display: inline;
+                    margin: 5px;
+                }
+                
+                section, article{
+                    border: 1px solid gray;
+                    margin: 5px;
+                    margin-bottom: 15px;
+                    padding: 8px;
+                    background-color: white;
+                    font-family: sans-serif;
+                    font-weight: bold;
+                    
+                    
+                }
+                section{
+                    background-color: lightblue;
+                }
+                section, article{
+                    font-family: sans-serif;
+                    font-weight: bold;
+                }
+                article{
+                    
+                }
+            </style>
+        </head>
+        
+        <header><h1>Assignment#2</h1></header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Menu1</li>
+                <li>Menu2</li>
+                <li>Menu3</li>
+            </ul>
+        </nav>
+
+        <section>
+            <article>
+                <h4>What is html5 (video) </h4>
+                <video width="400" muted>
+                    <source src="./video_for_ass2.mp4">
+                </video>
+            </article>
+
+            <article>
+                Image<br>
+                <img src="./image_for_ass2.jpg" alt="image_ass2" style="width: 400px;">
+                Canvas
+                <canvas id="myCanvas" width="100px" height="50px">
+                    Your browser does not support the HTML5 canvas.
+                </canvas>
+                <script>
+                    var c = document.getElementById("myCanvas");
+                    var ctx = c.getContext("2d");
+                    ctx.fillStyle = "#46b535";
+                    ctx.fillRect(0,0,100,50)
+                </script>
+            </article>
+        </section>
+
+        <footer>(C) 2015 WDT. All rights reserved.</footer>
+    </body>
+</html>

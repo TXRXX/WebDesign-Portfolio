@@ -1,0 +1,117 @@
+* { /* Start Selector ค่าพื้นฐาน */
+    background-color: rgb(255, 255, 255); /* ตั้งสี Background ทั้งเว็บ */
+    font-family: 'Roboto', sans-serif; /* ใช้ Font ทั้ง Web page*/
+}
+
+html { /* เลือก <html> ทั้งหทด */
+    scroll-behavior: smooth; /* ทำให้กด NAV แล้วเลื่อนแบบ smooth */
+}
+
+header { /* เลือก <header> ทั้งหทด */
+    width: 100vw; /* ตั้งความกว้างเต็มจอ */
+    height: 40px; /* ตั้งความสูง 40px */
+    color: rgb(0, 0, 0); /* สีตัวอักษรของ Header เป็นสีดำ */
+    font-size: 30px; /* ขนาดตัวอักษร 30px */
+    font-weight: bolder; /* ความหนาของตัวอักษร */
+    padding-top: 10px; /* ระยะห่างด้านบนจากขอบภายใน */
+    padding-bottom: 5px; /* ระยะห่างด้านล่างจากขอบภายใน */
+    margin-bottom: 50px; /* ระยะห่างด้านล่างของ header */
+    box-shadow: 0px 15px 10px -15px rgb(17, 17, 17, 0.4); /* Effect เงาของ header */
+    padding-left: 10px; /* เพิ่มระยะห่างด้านซ้ายให้ตัวอักษร */
+}
+
+h1 { /* เลือก <h1> ทั้งหทด */
+    margin-top: 30px; /* ระยะห่างด้านบนของ element */
+    text-align: center; /* จัดอักษรให้อยู่ตรงกลาง */
+}
+
+h2 { /* เลือก <h2> ทั้งหทด */
+    font-style: italic; /* ทำให้ตัวอักษรเอียง (ชื่อหนัง) */
+    margin-bottom: 60px; /* ระยะห่างระหว่างชื่อหนัง กับเนื้อเรื่องหนัง */
+}
+
+p { /* เลือก <p> ทั้งหมด */
+    font-weight: lighter; /* ทำให้ตัวอักษเป็นตัวบาง (คำอธิบายหนัง เหตุผล) */
+}
+
+body {
+    
+}
+
+
+/* NAV LINK */
+nav { /* เลือก nav ทั้งหมด */
+    text-align: center; /* จัดให้ตัวอักษรอยู่ตรงกลาง */
+    margin-bottom: 150px; /* ระยะห่างของ nav กับ section */
+    margin-top: 80px; /* ระยะห่างของ nav กับ header */
+    font-weight: lighter; /* ทำให้ตัวอักษรของ NAV เป็นตัวบาง */
+}
+
+ul li { /* เลือก ul li */
+    display: inline; /* การแสดงผลให้อยู่บรรทัดเดียวกัน */
+    margin: 50px; /* ระยะห่างของ nav แต่ละปุ่ม */
+}
+
+a:link { /* เลือก <a> เมื่อยังไม่เคยกด */
+    color: black; /* สีตัวอักษรเมื่อยังไม่เคยกด link */
+    text-decoration: none; /* ไม่แสดงเส้นใต้ของ link */
+}
+a:visited { /* เลือก <a> เมื่อ link เคยกดแล้ว */
+    color: black; /* สีตัวอักษรเมื่อเคยกด link นั้นแล้ว */
+}
+a:hover { /* เลือก <a> เมื่อเอา Pointer ไปแตะ */
+    color: white; /* สีตัวอักษร */
+    background-color:black; /* สีพื้นหลังเมื่อเอาเมาส์ไปแตะ */
+    border-radius: 20px; /* ความมนของขอบเมื่อเอาเมาส์ไปแตะ */
+    padding: 10px; /* ระยะห่างภายใน */
+    margin: -10px; /* ระยะห่างภายนอกระหว่าง link */
+}
+a:active { /*เลือก <a> เมื่อ Pointer กดใช้งาน*/
+    color: black; /* สีตัวอักษรเมื่อกด */
+    background-color:white; /* สีพื้นหลังเมื่อกด */
+    border: 1px solid black; /* เส้นขอบสีดำเมื่อกด */
+    border-radius: 20px; /* ความมนของขอบ */
+    padding: 10px; /* ระยะห่างภายใน */
+    margin: -11px; /* ระยะห่างภายนอกระหว่าง link */
+}
+/* ///////// */
+
+
+section { /* เลือก <section> ทั้งหมด */
+    width: 1100px; /* ความกว้างของ section */
+    padding-top: 30px; /* ระยะห่างภายในของด้านบน */
+    padding-bottom: 30px; /* ระยะห่างภายในของด้านล่าง */
+    margin-left: auto; /* ตั้งระยะห่างภายนอกซ้ายอัติโนมัติ */
+    margin-right: auto; /* ตั้งระยะห่างภายนอกขวาอัติโนมัติ */
+    margin-top: 50px; /* ระยะห่างภายนอกด้านบน */
+    margin-bottom: 30px; /* ระยะห่างภาย */
+    border: 1px solid black; /* เพิ่มขอบขนาด 1px สีดำ */
+    border-radius: 10px; /* ความมนของขอบ */
+}
+
+article { /* เลือก <article> ทั้งหมด */
+    padding: 10px; /* ความห่างภายใน */
+}
+
+iframe { /* เลือกเฉพาะ <iframe> */
+    border-radius: 10px; /* ความมนของขอบ */
+    margin-left: 20px; /* ระยะห่างด้านซ้าย */
+    margin-right: 20px; /* ระยะห่างด้านขวา */
+}
+
+footer { /* เลือก <footer> */
+    text-align: center; /* จัดตัวอักษรอยู่ตรงกลาง */
+    width: 100vw; /* ความกว้างเต็มจอ */
+    height: 30px; /* ความสูง 30px */
+    margin-right: auto; /* ตั้งระยะห่างภายนอกซ้ายอัติโนมัติ */
+    margin-left: auto; /* ตั้งระยะห่างภายนอกขวาอัติโนมัติ */
+    font-size: 14px; /* ตั้งตัวอักษรขนาด 14px */
+    color: white; /* ตั้งตัวอักษรสีขาว */
+    background-color: black; /* พื้นหลังสีดำ */
+    padding-top: 1%; /* จัดระยะห่างภายในขอบบน */
+}
+
+#backtotop{ /* เลือก id backtotop */
+    text-align: center; /* จัดอักษรอยู่ตรงกลาง */
+    font-size: 14px; /* ตั้ง font 14px */
+}

@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
+/*import font*/
+
+* {
+    padding: 0;
+    /*ระยะห่างขอบ*/
+    margin: 0;
+    /*ระยะห่างขอบ*/
+    list-style: none;
+    /*List ไม่มีสัญลักษ์*/
+    text-decoration: none;
+    /*ไม่ตกแต่งตัวอักษร*/
+    font-family: 'Open Sans', sans-serif;
+    /*ใช้ชุดตัวอักษร*/
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    /*เลือกใช้ชุดอักษร*/
+    background-color: #fff;
+    /*สีพื้นหลังทั้งหมด*/
+}
+
+.myname {
+    background-color: rgba(0, 0, 0, 0.8);
+    /*สี nav bar ด้านบน*/
+    width: 100vw;
+    /*ความกว้าง nav*/
+    height: 70px;
+    /*ความสูง nav*/
+    text-align: center;
+    /*จัดอักษรอยู่ตรงกลาง*/
+    color: white;
+    /*สีตัวอักษร*/
+    font-size: 50px;
+    /*ขนาดตัวอักษร*/
+    font-weight: bold;
+    /*อักษรตัวหนา*/
+    padding-top: 15px;
+    /*ระยะห่างจากด้านบน*/
+    padding-bottom: 5px;
+    /*ระยะห่างจากด้านล่าง*/
+    top: 0;
+    /*ระยะห่างจากด้านบน*/
+    position: fixed;
+    /*ตำแหน่ง fixed*/
+    overflow: hidden;
+    /*ซ่อน scroll*/
+    z-index: 1;
+    /*Layer ชั้น1*/
+    backdrop-filter: blur(3px);
+    /*ทำให้พื้นหลังเบลอ*/
+}
+
+.myname span {
+    /*<span> ใน myname*/
+    padding-top: 20px;
+    /*ระยะห่างจากด้านบน*/
+    font-size: 14px;
+    /*ขนาดอักษร*/
+    float: right;
+    /*ชิดขวา*/
+    padding-right: 50px;
+    /*ความห่างจากด้านขวา*/
+}
+
+.myname p {
+    /*<p> ใน myname*/
+    padding-left: 15%;
+    /*ความห่างจากด้านซ้าย*/
+}
+
+.sidebar {
+    position: fixed;
+    /*ตำแหน่ง fixed*/
+    left: -250px;
+    /*ระยะห่างด้านซ้าย*/
+    width: 250px;
+    /*ความกว้าง*/
+    height: 100vh;
+    /*ความสูง*/
+    transition: all .5s ease;
+    /*การเคลื่อนไหว*/
+    background-color: rgba(0, 0, 0, 0.8);
+    /*สีพื้นหลัง*/
+    z-index: 2;
+    /*Layer ชั้น 2*/
+}
+
+.sidebar ul a {
+    /* <a> ใน sidebar*/
+    display: block;
+    /*แสดงผล block*/
+    height: 100%;
+    /*ความสูง*/
+    width: 100%;
+    /*ความกว้าง*/
+    line-height: 10px;
+    /*ระยะห่างบรรทัด*/
+    font-size: 20px;
+    /*ขนาดตัวอักษร*/
+    color: white;
+    /*สีตัวอักษร*/
+    box-sizing: border-box;
+    /*แสดงผลในกรอบ*/
+    transition: .4s;
+    /*ระยะเวลาเคลื่อนไหว*/
+    padding: 150px 0 0 60px;
+    /*ความกว้างภายใน*/
+    font-weight: bold;
+    /*ตัวอักษรหนา*/
+    backdrop-filter: blur(3px);
+    /*พื้นหลังเบลอ*/
+    font-weight: 400;
+    /*ตัวอักษรหนา*/
+}
+
+ul li:hover a {
+    padding-left: 50px;
+    /*ระยะห่างด้านซ้าย*/
+}
+
+#check {
+    display: none;
+    /*เอาไว้เช็คเวลากดเปิด sidebar*/
+}
+
+label #btn, label #cancel {
+    position: fixed;
+    /*ตำแหน่ง*/
+    border-radius: 3px;
+    /*ความมนของขอบ*/
+    cursor: pointer;
+    /*เมื่อเมาส์ชี้*/
+    z-index: 3;
+    /*Layer ชั้น 3*/
+}
+
+label #btn {
+    left: 40px;
+    /*ระยะห่างจากซ้าย*/
+    top: 25px;
+    /*ระยะห่างจากบน*/
+    font-size: 35px;
+    /*ขนาดอักษร*/
+    color: white;
+    /*สีอักษร*/
+    padding: 6px 12px;
+    /*ความห่าง*/
+    transition: all .5s;
+    /*การเคลื่อนไหว*/
+}
+
+label #cancel {
+    z-index: 1111;
+    /*Layer ชั้นบนสุด*/
+    left: -195px;
+    /*ระยะห่างจากซ้าย*/
+    top: 17px;
+    /*ระยะห่างจากบน*/
+    font-size: 30px;
+    /*ขนาดอักษร*/
+    color: white;
+    /*สีอักษร*/
+    padding: 4px 9px;
+    /*ระยะห่างภายใน*/
+    transition: all .5s ease;
+    /*การเคลื่อนไหว*/
+}
+
+label #cancel:hover {
+    /* animation ตอนกดปิด sidebar */
+    transform: rotate(90deg);
+    transition: all 1s;
+}
+
+#check:checked~.sidebar {
+    left: 0;
+    /*ซ่อน sidebar*/
+}
+
+#check:checked~label #btn {
+    left: 250px;
+    /*แสดง sidebar*/
+    opacity: 0;
+    /*ความโปร่งใส*/
+    pointer-events: none;
+    /*การแสดงเมาส์*/
+}
+
+#check:checked~label #cancel {
+    left: 195px;
+    /*ระยะห่างจากซ้าย*/
+}
+
+#check:checked~section {
+    margin-left: 250px;
+    /*ระยะห่างจากซ้าย*/
+}
+
+#tophome {
+    background:linear-gradient(180deg, rgba(0,212,255,0) 0%, rgb(20, 20, 20) 100%), url('img/header.jpg');
+    /*พื้นหลังและไล่สี*/
+    background:-webkit-linear-gradient(180deg, rgba(0,212,255,0) 0%, rgb(20, 20, 20) 100%), url('img/header.jpg'); /*พื้นหลังและไล่สี
+    background-repeat: no-repeat;
+    /*ไม่แสดงผลซ้ำ*/
+    background-position: center;
+    /*แสดงผลตรงกลาง*/
+    background-size: cover;
+    /*แสดงผลครอบคลุม*/
+    width: 100vw;
+    /*ความกว้าง*/
+    height: 600px;
+    /*ความสูง*/
+    z-index: 0;
+    /*Layer ชั้น 0*/
+    margin-bottom: 50px;
+}
+
+h1 {
+    position: relative;
+    /*ตำแหน่ง relative*/
+    top: 50%;
+    /*ความห่างบน*/
+    color: rgb(0, 0, 0);
+    /*สีอักษร*/
+    float: left;
+    /*อยู่ชิดซ้าย*/
+    font-size: 80px;
+    /*ขนาดอักษร*/
+    font-weight: bold;
+    /*ความหนาอักษร*/
+    padding-left: 40px;
+    /*ความห่างซ้าย*/
+    color: white;
+}
+
+/* กล่องแสดงเนื้อหา Content */
+.box {
+    display: none;
+    background: #fff;
+    width: 70vw;
+    height: auto;
+    border: 2px solid black;
+    color: black;
+    text-align: left;
+    text-indent: 50px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+/* เช็คการทำงานว่ามีการกดเปิด box หรือยัง ถ้ามีการกดแล้วจะแสดง Box Content */
+#trigger:checked+.box, #trigger2:checked+.box,
+#trigger3:checked+.box, #trigger4:checked+.box,
+#trigger5:checked+.box, #trigger6:checked+.box,
+#trigger7:checked+.box{
+    display: block;
+}
+
+/* ปิดการแสดงผลของ checkbox */
+#trigger, #trigger2, #trigger3, #trigger4, #trigger5, #trigger6, #trigger7{
+    display: none;
+}
+
+/* ส่วนหัวของ Content */
+.content-head {
+    display: block;
+    width: 70vw;
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    padding: 10px 20px 5px;
+    border: 0 0 1px 0;
+    border-style: solid;
+    border-color: rgb(34, 34, 34);
+}
+
+/* Header ของเนื้อหาทั้งหมด */
+.content-head-m {
+    display: block;
+    width: 70vw;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid black;
+    padding: 10px 20px 5px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ICON ใน Header */
+i {
+    font-size: 35px;
+    float: left;
+    height: 40px;
+    padding: auto;
+}
+
+/* เมื่อเอา pointer ชี้ icon */
+i:hover {
+    font-size: 38px;
+    transform:rotate(90deg);
+    transition: all .5s;
+}
+
+/* การแสดงผลรูปภาพใน Content */
+.imgClass {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    margin-bottom: 30px;
+}
+
+/* การแสดงผลโค้ดตัวอย่างใน Content */
+.showCode {
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid grey;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 10px;
+    background-color: rgb(235, 235, 235);
+}
+
+/* คำนำที่แสดงผลก่อนถึง Content */
+.intro {
+    display: block;
+    width:1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 100px;
+    line-height: 50px;
+}
+
+/* ส่วน Footer ของเว็บ */
+footer {
+    width: 100vw;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 1);
+    margin-top: 200px;
+}
+
+/* ชื่อที่แสดงใน Footer */
+.foot-name {
+    letter-spacing: 20px;
+    color: white;
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-left: 100px;
+}
+
+/* Back to top ที่ Footer */
+.btt {
+    color: white;
+    letter-spacing: 3px;
+    font-size: 14px;
+    float: right;
+    margin-right: 10px;
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html" charset="utf-8">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <title>Home</title>
+    </head>
+    
+    <body>
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <div class="myname">
+                <p>CHANON P.<span><i class="far fa-envelope" style="font-size: 20px; margin-right: 10px; transform: none;"></i> p.chanon@kkumail.com</span></p>
+            </div>
+        <nav class="sidebar">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#warp">CONTENTS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+        </nav>
+        
+        <div id="tophome">
+            <h1>CSS-Font Design</h1>
+        </div>
+        <section>
+            <div class="intro">
+                Font sizing in CSS sounds as though it should be easy. Until you try it. Many developers use the force; they tinker with the font-size property until it looks right only to find it’s different in another browser. A little understanding can go a long way…
+            </div>
+            <center>
+            <div class="content-head-m">LISTS</div>
+            <!-- 1 -->
+            <div id="warp" class="content-head" for="trigger">
+                <label for="trigger"><i class="fas fa-caret-right"></i></label>
+                <h4>The font-size Property</h4>
+            </div>
+            <input id="trigger" type="checkbox">
+            <div class="box">
+                The font-size property can be set for any HTML tag (even if it would not normally contain textual content like br). It can be assigned a variety of absolute, relative, or length size parameters.
+            An element will inherit the font-size of its parent unless you override it. This is especially important when you specify relative sizes.
+            </div>
+
+            <!-- 2 -->
+            <div class="content-head" for="trigger2">
+                <label for="trigger2"><i class="fas fa-caret-right"></i></label>
+                <h4>Absolute Font Sizing Keywords</h4>
+            </div>
+            <input id="trigger2" type="checkbox">
+            <div class="box">
+                Several absolute font-sizing keywords are available. The font size is determined from a browser preset and the element will not inherit its parent’s size.
+                <ol><br>
+                    <li style="font-size: xx-small;">• font-size: xx-small;</li>
+                    <li style="font-size: x-small;">• font-size: x-small;</li>
+                    <li style="font-size: small;">• font-size: small;</li>
+                    <li style="font-size: medium;">• font-size: medium;</li>
+                    <li style="font-size: large;">• font-size: large;</li>
+                    <li style="font-size: x-large;">• font-size: x-large;</li>
+                    <li style="font-size: xx-large;">• font-size: xx-large;</li>
+                </ol><br>
+                Although most browsers support these keywords, the exact sizes will differ. They are a fairly crude method of font sizing and are generally avoided by most developers.
+            </div>
+
+            <!-- 3 -->
+            <div class="content-head" for="trigger3">
+                <label for="trigger3"><i class="fas fa-caret-right"></i></label>
+                <h4>Relative Font Sizing Keywords</h4>
+            </div>
+            <input id="trigger3" type="checkbox">
+            <div class="box">
+                Two relative font-sizing keywords are available. The font is sized according to its parent element:
+                <ol><br>
+                    <li style="font-size: smaller;">• font-size: smaller;</li>
+                    <li style="font-size: large;">• font-size: larger;</li>
+                </ol><br>
+                For example, if the parent has a font size of ‘medium’, a value of ‘larger’ will set the element to ‘large’. Other font units are normally altered by a factor of around 1.2 but, again, there is no standard and browser results will differ.
+            </div>
+
+            <!-- 4 -->
+            <div class="content-head" for="trigger4">
+                <label for="trigger4"><i class="fas fa-caret-right"></i></label>
+                <h4>Absolute Lengths</h4>
+            </div>
+            <input id="trigger4" type="checkbox">
+            <div class="box">
+                The font-size property can be assigned an absolute length:
+                <ol><br>
+                    <li>•	mm: millimeters, e.g. 10mm.</li>
+                    <li>•	cm: centimeters, e.g. 1cm ( = 10mm).</li>
+                    <li>•	in: inches, e.g. 0.39in ( ~= 10mm).</li>
+                    <li>•	pt: point, where 1pt is generally assumed to be 1/72 inch e.g. 12pt.</li>
+                    <li>•	pc: pica, where 1pc is 12pt.</li>
+                    <li>•	h5: px: pixel, e.g. 14px.</li>
+                </ol><br>
+                In general, there are issues with all these measurement units. Millimeters, centimeters and inches are inaccurate for a screen-based medium. Points and picas are unreliable since systems can use different dpisettings. Pixel appears to be the most suitable, but it can lead to accessibility issues because the text cannot be resized in IE.
+            </div>
+
+            <!-- 5 -->
+            <div class="content-head" for="trigger5">
+                <label for="trigger5"><i class="fas fa-caret-right"></i></label>
+                <h4>Relative Lengths</h4>
+            </div>
+            <input id="trigger5" type="checkbox">
+            <div class="box">
+                The font-size property can be assigned a unit that it relative to its parent’s font size:
+                <ol><br>
+                    <li>•	em: 1em is equivalent to the current font size, so 2em is twice as large.</li>
+                    <li>•	%: 100% is equivalent to the current font size, so 200% is twice as large.</li>
+                    <li>•	ex: 1ex is equivalent to the height of the letter ‘x’ in the current font.</li>
+                </ol><br>
+                Few developers use ‘ex’, but it can be useful in some situations where you need fine-grained font sizes, e.g. 1ex rather than 0.525em.
+                <br> Percentage and ‘em’ sizes are equivalent, e.g. 50% = 0.5em, 100% = 1em, 120% = 1.2em, etc. Some browsers exhibit subtle differences but it’s rarely a major problem. If you want to save every byte, you could choose the shortest definition, i.e. 50% is shorter than 0.5em and 1em is shorter than 100%.
+            </div>
+
+            <!-- 6 -->
+            <div class="content-head" for="trigger6">
+                <label for="trigger6"><i class="fas fa-caret-right"></i></label>
+                <h4>Text Sizing and Page Zooming</h4>
+            </div>
+            <input id="trigger6" type="checkbox">
+            <div class="box">
+                This is where additional complexity creeps in. Most browsers allow the user to:
+                <ol><br>
+                    <li>1.	increase or decrease the base text size (image dimensions are not changed)</li>
+                    <li>2.	zoom the page in or out so all the text and graphics change accordingly, or</li>
+                    <li>3.	allow both text sizing and page zooming.</li>
+                </ol><br>
+                Just to complicate matters further, Internet Explorer does not allow text resizing on elements which have a font size defined in pixels (px).
+                <br><br><p>If you’re a designer moving to the web from a print background, it’s disconcerting to give the user that much power. Your design could be ruined by a user zooming in 200% but reducing the text size to 50%. And — no — there is nothing you can do to prevent it. Nor should you.</p> 
+            </div>
+
+            <!-- 7 -->
+            <div class="content-head" for="trigger7">
+                <label for="trigger7"><i class="fas fa-caret-right"></i></label>
+                <h4>CSS Font Sizing Recommendations</h4>
+            </div>
+            <input id="trigger7" type="checkbox">
+            <div class="box">
+                The general consensus is that ‘em’ or ‘%’ is the best solution in most situations. Fonts can be finely scaled relative to each other and browser text sizing is supported. I would also recommend using a percentagefont-size on the body tag; it results in better text-sizing in some older browsers.
+                <br> There are a couple of other recommendations I would suggest when you’re developing a site:
+                <ol><br>
+                    <li>1.	reset the font size and page zoom to their default values in all your browsers before testing (it’s caught me out a few times!)</li>
+                    <li>2.	try reasonable combinations of text sizing and page zooming in a variety of browsers to ensure the text remains readable.</li>
+                </ol><br>
+                <img class="imgClass" src="./img/Picture1.jpg" alt="img1"><br>
+                <img class="imgClass" src="./img/Picture2.jpg" alt="img2"><br>
+
+                <p>Web font embedding services
+                    Google Web Fonts (GWF) or Typekit are systems which allow the use of fonts hosted on their servers. GWF is free to use, does not require you to have an account, and has no limit on traffic or domains unlike Typekit. Typekit sets the cost of the service according to the number of domains in which the font is used, or the site’s monthly traffic. One of the most valued characteristics of GWF is the option to download a desktop version of the fonts for use in the project design phase.
+                    Implementation
+                    <br>It really is quick and simple:
+                    <br>1. Choose a font. You can add it to your collection or use “quick-use” to generate the code and options for that font.
+                    <br>2. Copy and paste the code generated into your &lt;Head&gt;
+                    <div class="showCode">
+                        &lt;head&gt;<br>
+                        &lt;link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine"&gt;
+                            <br>&lt;/head&gt;
+                    </div>
+                </p>
+                <br>3. The font is now accessible in your CSS code
+                    <div class="showCode">
+                        body {
+                            <br>    font-family: 'Tangerine', serif;
+                            <br>    font-size: 48px;<br>
+                          }                    
+                    </div>
+                <p>
+                    Here you can consult a extended manual for styles, script subsets, and using multiple fonts.
+Top recommended fonts from Google Web Fonts. You will find many unfavorable reviews about the quality of GWF’s fonts and the amateur nature of many typefaces. We must remember that Google Web Fonts is a collaborative open source project, but many people think still there should be a higher level of quality control.
+                </p><br>
+                <ul>
+                    <li><h4>•   Open Sans</h4></li>
+                    <img class="imgClass" src="./img/Picture3.jpg" alt="img3"><br>
+                    <li><h4>•   Josefin Slab</h4></li>
+                    <img class="imgClass" src="./img/Picture4.jpg" alt="img4"><br>
+                    <li><h4>•   Arvo</h4></li>
+                    <img class="imgClass" src="./img/Picture5.jpg" alt="img5"><br>
+                    <li><h4>•   Lato</h4></li>
+                    <img class="imgClass" src="./img/Picture6.jpg" alt="img6"><br>
+                    <li><h4>•   Vollkorn</h4></li>
+                    <img class="imgClass" src="./img/Picture7.jpg" alt="img7"><br>
+                    <li><h4>•   Abril Fatface</h4></li>
+                    <img class="imgClass" src="./img/Picture8.jpg" alt="img8"><br>
+                    <li><h4>•   Ubuntu</h4></li>
+                    <img class="imgClass" src="./img/Picture9.jpg" alt="img9"><br>
+                    <li><h4>•   PT Sans + PT Serif</h4></li>
+                    <img class="imgClass" src="./img/Picture10.jpg" alt="img10"><br>
+                    <li><h4>•   Old Standard TT</h4></li>
+                    <img class="imgClass" src="./img/Picture11.jpg" alt="img11"><br>
+                    <li><h4>•   Droid Sans</h4></li>
+                    <img class="imgClass" src="./img/Picture12.jpg" alt="img12"><br>
+                </ul>
+                <p>Embedding fonts using the @font-face rule
+                    Fonts are hosted on the user’s server independently of external services. @font-face was a deprecated CSS2 rule that has been re-introduced in CSS3 specifications and is supported by almost all modern browsers. A web font is a customized font which is supported by different browers and comes in formats such as TTF, WOFF, EOT and SVG. There are many fonts available for @font-face embedding, but we are going to bring you a selection of the web fonts available on FONT SQUIRREL which are free to use and includeprepackaged @font-face kits with the required formats, CSS and HTML code.Font Squirrel also offers the fantastic “@Font-Face Generator” tool, which can convert your desktop font into the appropriate format so you can use it as a web font. Implementation of web fonts with the @font-face rule.
+                    <br>1. Select your favorite font from Font Squirrel.
+                    <br>2. Download the @font-face kit and test the sample code in stylesheet.css and demo.html files. All the font formats must be uploaded to your server.
+                    </p>
+                    <div class="showCode">
+                        <p style="text-indent: 0;">
+                            @font-face {
+                            font-family: 'ChunkFiveRegular';<br>
+                            src: url('Chunkfive-webfont.eot');<br>
+                            src: url('Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),<br>
+                            url('Chunkfive-webfont.woff') format('woff'),<br>
+                            url('Chunkfive-webfont.ttf') format('truetype'),<br>
+                            url('Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');<br>
+                            font-weight: normal;<br>
+                            font-style: normal;<br>
+                            }   
+                        </p>
+                        
+                                          
+                    </div>
+            </div>
+        </center>
+        </section>
+        <footer>
+            <div class="foot-name">CHANON P.<a href="#tophome" class="btt">BACK TO TOP</a></div>
+        </footer>
+    </body>
+</html>

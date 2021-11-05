@@ -1,0 +1,137 @@
+/* เลือก <ul> ทุกตัวโดยที่เริ่มตามจากหลัก <h2> */
+/* h2 ~ ul {
+    color: red;
+} */
+
+/* เลือก <p> ตัวแรกตัวเดียวที่ตามหลัง div */
+/* div + p {
+    color: red;
+    font-size: 1.5em;
+} */
+
+/* เหมือนกัน div p { } */
+/* div > p {
+    color: blue;
+    background-color: black;
+    padding: 0.5em;
+} */
+
+
+/* attribrute selector */
+
+[alt] { } /* เลือก element ที่มี alt */
+
+[alt = "cs"] { /* เลือก element ที่มี alt="cs" เท่านั้น */
+    /* border: red solid; */
+}
+
+[alt ~= "cs"] { /* เลือก element ที่มี alt คำว่า "cs" */
+    /* border: red solid; */
+}
+
+[alt ^= "cs"] { /* เลือก element ที่มี alt คำว่า "cs" นำหน้า */
+    /* border: red solid; */
+}
+
+[alt |= "cs"] { /* เลือก element ที่มี alt = "cs" หรือ cs="cs- มีเครื่องหมาย (-) ตามหลัง" */
+    /* border: red solid; */
+}
+
+[alt $= "cs"] { /* เลือก element ที่มี alt คำว่า "cs" ต่อท้ายเท่านั้น */
+    /* border: red solid; */
+}
+
+[alt *= "cs"] { /* เลือก element ที่มี alt คำว่า "cs" ทุกตัวจาก string ไม่ว่าจะอยู่ตรงไหน */
+    /* border: red solid; */
+}
+
+
+input[type="text"]:enabled {
+    background-color: brown;
+}
+
+input[type="text"]:disabled {
+    background-color: gray;
+}
+
+
+/* PSEUDO Class in CSS3 */
+
+p:first-of-type { /* ตัวแรกสุดของ TYPE */
+    /* background-color: pink; */
+}
+
+p:last-child { /* ดึงตัว <p> ที่เป็น subelement ตัวสุดท้ายของ parent element ใดๆ */
+    /* background-color: pink; */
+}
+
+p:first-child { /* ดึงตัว <p> ที่เป็น subelement ตัวสุดแรกของ parent element ใดๆ */
+    /* background-color: pink; */
+}
+
+
+p {
+    /* color: red; */
+    /* color: #FF0000; #RRGGBB */
+    /* color: rgb(255, 0, 0); */
+    color: rgba(255, 0, 0, 1);
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* x y ฟุ้ง color */
+}
+
+div.shadow {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    box-shadow: 5px 5px 10px black;
+}
+
+div.gradient {
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    background: linear-gradient(cyan,yellow);
+    /* background: radial-gradient(cyan, yellow); */
+
+    background: -moz-linear-gradient(cyan,yellow); /* FireFox */
+    background: -o-linear-gradient(cyan,yellow); /**/
+    background: -webkit-linear-gradient(cyan,yellow); /* Safari */
+
+}
+
+div.transition {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    transition: background-color 1s;
+}
+div.transition:hover {
+    background-color: red;
+    width: 200px;
+}
+
+.button{
+    background-color: red;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    display: inline-block;
+    margin: 0px 2px;
+    cursor: pointer;
+}
+
+
+.multi_col {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+
+div.box { /* Block element */
+    margin: 5px;
+    padding: 10px;
+    border: 10px solid;
+    width: 100px;
+    height: 100px;
+}

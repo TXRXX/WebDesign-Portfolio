@@ -35,6 +35,10 @@ body {
     background-color: wheat;
 }
 
+.gogo {
+    display: contents;
+    background-color: red;
+}
 
 .head2 {
     height: 5rem;

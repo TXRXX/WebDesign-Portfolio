@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style-ex2.css">
+    <title>Ex2</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <label for="position" class="required">Which position are you applying for?</label><br>
+                <select name="position" id="position">
+                    <option value="blank"></option>
+                    <option value="CEO">CEO</option>
+                    <option value="Officer">Officer</option>
+                    <option value="Trainee">Trainee</option>
+                </select> 
+                <br><br>
+                <label for="relocate" class="required">Are you willing to relocate?</label><br>
+                <input type="radio" value="yes" name="yn">Yes
+                <input type="radio" value="yes" name="yn">No
+                <br><br>
+                <label for="when" class="required">When can you start?</label><br>
+                <input type="date" name="" id="">
+                <br><br>
+                <label for="portfolio">Portfolio Web Site</label><br>
+                <input type="url" value="https://" class="port">
+                <br><br>
+                <label for="resume">Attach a Copy of Your Resume</label><br>
+                <input type="file">
+            </td>
+            <td>
+                <p class="info">Your Contact information</p>
+                <label for="name" class="required">Name</label><br>
+                <input for="fname" type="text" id="fname" >
+                <input for="lname" type="text" id="lname" ><br>
+                <span class="first">First</span><span class="last"> Last</span>
+                <br><br>
+                <label for="email" class="required">Email Address</label><br>
+                <input type="email" class="mail">
+                <br><br>
+                <label for="phone" class="required">Phone</label><br>
+                <input type="phone" class="phonenum" maxlength="3">-<input type="phone" class="phonenum" maxlength="3">-<input type="phone" class="phonenum" maxlength="3"><br>
+                <span class="phone-span">### - ### - ###</span>
+                <br><br>
+                <input type="submit" value="Submit" class="btn">
+            </td>
+        </tr>
+        
+    </table>
+    <a href="./exercise1.html">
+        <div class="btn2">< Excercise 1 </div>
+    </a>
+</body>
+</html>

@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap'); /*import font*/
+* {
+    padding: 0; /*ระยะห่างขอบ*/
+    margin: 0; /*ระยะห่างขอบ*/
+    list-style: none; /*List ไม่มีสัญลักษ์*/
+    text-decoration: none; /*ไม่ตกแต่งตัวอักษร*/
+    font-family: 'Open Sans', sans-serif; /*ใช้ชุดตัวอักษร*/
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /*เลือกใช้ชุดอักษร*/
+    background-color: #141414; /*สีพื้นหลังทั้งหมด*/
+}
+.myname {
+    background-color: rgba(0, 0, 0, 0.8); /*สี nav bar ด้านบน*/
+    width: 100vw; /*ความกว้าง nav*/
+    height: 70px; /*ความสูง nav*/
+    text-align: center; /*จัดอักษรอยู่ตรงกลาง*/
+    color: white; /*สีตัวอักษร*/
+    font-size: 50px; /*ขนาดตัวอักษร*/
+    font-weight: bold; /*อักษรตัวหนา*/
+    padding-top: 15px; /*ระยะห่างจากด้านบน*/
+    padding-bottom: 5px; /*ระยะห่างจากด้านล่าง*/
+    top: 0; /*ระยะห่างจากด้านบน*/
+    position: fixed; /*ตำแหน่ง fixed*/
+    overflow: hidden; /*ซ่อน scroll*/
+    z-index: 1; /*Layer ชั้น1*/
+    backdrop-filter: blur(3px); /*ทำให้พื้นหลังเบลอ*/
+}
+.myname span { /*<span> ใน myname*/
+    padding-top: 20px; /*ระยะห่างจากด้านบน*/
+    font-size: 14px; /*ขนาดอักษร*/
+    float: right; /*ชิดขวา*/
+    padding-right: 50px; /*ความห่างจากด้านขวา*/
+}
+.myname p { /*<p> ใน myname*/
+    padding-left: 15%; /*ความห่างจากด้านซ้าย*/
+}
+.sidebar { 
+    position: fixed; /*ตำแหน่ง fixed*/
+    left: -250px; /*ระยะห่างด้านซ้าย*/
+    width: 250px; /*ความกว้าง*/
+    height: 100vh; /*ความสูง*/
+    transition: all .5s ease; /*การเคลื่อนไหว*/
+    background-color: rgba(0, 0, 0, 0.8); /*สีพื้นหลัง*/
+    z-index: 2; /*Layer ชั้น 2*/
+}
+
+.sidebar ul a { /* <a> ใน sidebar*/
+    display: block; /*แสดงผล block*/
+    height: 100%; /*ความสูง*/
+    width: 100%; /*ความกว้าง*/
+    line-height: 10px; /*ระยะห่างบรรทัด*/
+    font-size: 20px; /*ขนาดตัวอักษร*/
+    color: white; /*สีตัวอักษร*/
+    box-sizing: border-box; /*แสดงผลในกรอบ*/
+    transition: .4s; /*ระยะเวลาเคลื่อนไหว*/
+    padding: 150px 0 0 60px; /*ความกว้างภายใน*/
+    font-weight: bold; /*ตัวอักษรหนา*/
+    backdrop-filter: blur(3px); /*พื้นหลังเบลอ*/
+    font-weight: 400; /*ตัวอักษรหนา*/
+}
+
+ul li:hover a {
+    padding-left: 50px; /*ระยะห่างด้านซ้าย*/
+}
+
+#check {
+    display: none; /*เอาไว้เช็คเวลากดเปิด sidebar*/
+}
+
+label #btn, label #cancel {
+    position: fixed; /*ตำแหน่ง*/
+    border-radius: 3px; /*ความมนของขอบ*/
+    cursor: pointer; /*เมื่อเมาส์ชี้*/
+    z-index: 3; /*Layer ชั้น 3*/
+}
+
+label #btn {
+    left: 40px;  /*ระยะห่างจากซ้าย*/
+    top: 25px; /*ระยะห่างจากบน*/
+    font-size: 35px; /*ขนาดอักษร*/
+    color: white; /*สีอักษร*/
+    padding: 6px 12px; /*ความห่าง*/
+    transition: all .5s; /*การเคลื่อนไหว*/
+}
+
+
+label #cancel {
+    z-index: 1111; /*Layer ชั้นบนสุด*/
+    left: -195px; /*ระยะห่างจากซ้าย*/
+    top: 17px; /*ระยะห่างจากบน*/
+    font-size: 30px; /*ขนาดอักษร*/
+    color: white; /*สีอักษร*/
+    padding: 4px 9px; /*ระยะห่างภายใน*/
+    transition: all .5s ease; /*การเคลื่อนไหว*/
+
+}
+label #cancel:hover {
+    /* animation ตอนกดปิด sidebar */
+    color: #fb3570;
+    transform:rotate(90deg);
+    transition: all 1s;
+}
+
+#check:checked~.sidebar {
+    left: 0; /*ซ่อน sidebar*/
+}
+
+#check:checked~label #btn {
+    left: 250px; /*แสดง sidebar*/
+    opacity: 0; /*ความโปร่งใส*/
+    pointer-events: none; /*การแสดงเมาส์*/
+}
+
+#check:checked~label #cancel {
+    left: 195px; /*ระยะห่างจากซ้าย*/
+}
+
+#check:checked~section {
+    margin-left: 250px; /*ระยะห่างจากซ้าย*/
+}
+
+#tophome {
+    background:linear-gradient(180deg, rgba(0,212,255,0) 0%, rgb(20, 20, 20) 100%), url('img/bg.jpg'); /*พื้นหลังและไล่สี*/
+    background:-webkit-linear-gradient(180deg, rgba(0,212,255,0) 0%, rgb(20, 20, 20) 100%), url('img/bg.jpg'); /*พื้นหลังและไล่สี*/
+    background-repeat: no-repeat; /*ไม่แสดงผลซ้ำ*/
+    background-position: center; /*แสดงผลตรงกลาง*/
+    background-size: cover; /*แสดงผลครอบคลุม*/
+    width: 100vw; /*ความกว้าง*/
+    height: 900px; /*ความสูง*/
+    z-index: 0; /*Layer ชั้น 0*/
+}
+
+h1 {
+    position: relative; /*ตำแหน่ง relative*/
+    top: 50%; /*ความห่างบน*/
+    color: white; /*สีอักษร*/
+    float: left; /*อยู่ชิดซ้าย*/
+    font-size: 80px; /*ขนาดอักษร*/
+    font-weight: bold; /*ความหนาอักษร*/
+    padding-left: 40px; /*ความห่างซ้าย*/
+}
+
+.container {
+    width: 100vw; /*ความกว้าง*/
+    height: 500px; /*ความสูง*/
+    display: flex; /*แสดงผลยืดหยุ่น*/
+    justify-content: center; /*อยู่ตรงกลาง*/
+    margin-top: 30px; /*ระยะห่างบน*/
+}
+
+.container-1 {
+    margin-right: 55px; /*ระยะห่างขวา*/
+    margin-left: 5px; /*ระยะห่างซ้าย*/
+    width: 400px; /*ความกว้าง*/
+    height: 400px;/*ความสูง*/
+    background-color: rgb(36, 36, 36); /*สีพื้นหลัง*/
+    color: #ffffff; /*สีอักษร*/
+    border-radius:15px; /*ความมนขอบ*/
+    text-align: center; /*อักษรอยู่กลาง*/
+    justify-content: center; /*จัดอยู่ตรงกลาง*/
+    padding: 10px 10px 0px 10px; /*ระยะห่างขอบ*/
+}
+.container-2 {
+    width: 400px; /*ความกว้าง*/
+    height: 400px; /*ความสูง*/
+    background-color: rgb(36, 36, 36); /*สีพื้นหลัง*/
+    border-radius: 15px; /*ความมนขอบ*/
+    color: white; /*สีอักษร*/
+    text-align: center; /*อักษรอยู่กลาง*/
+    justify-content: center; /*จัดอยู่ตรงกลาง*/
+    padding: 10px 10px 0px 10px; /*ระยะห่างขอบ*/
+}
+.container-3 {
+    margin-left: 55px; /*ระยะห่างซ้าย*/
+    margin-right: 5px; /*ระยะห่างขวา*/
+    width: 400px; /*ความกว้าง*/
+    height: 400px; /*ความสูง*/
+    background-color: rgb(36, 36, 36); /*สีพื้นหลัง*/
+    border-radius: 15px; /*ความมนขอบ*/
+    color: white; /*สีอักษร*/
+    text-align: center; /*อักษรอยู่กลาง*/
+    justify-content: center; /*จัดอยู่ตรงกลาง*/
+    padding: 10px 10px 0px 10px; /*ระยะห่างขอบ*/
+}
+
+.container-1:hover, .container-2:hover, .container-3:hover {
+    background: 
+     linear-gradient(rgb(36, 36, 36),rgb(36, 36, 36)) padding-box, /*พื้นหลังไล่สี*/
+     linear-gradient(to right, #9c20aa, #fb3570) border-box;
+    color: #ffffff; /*สีอักษร*/
+    border: 1px solid transparent; /*สีขอบ*/
+    border-radius:15px; /*ความมนขอบ*/
+    transform: scale(1.05); /*ขนาดใหญ่ขึ้น*/
+}
+
+.btn-content {
+    width: 140px; /*ความกว้าง*/
+    height: 40px; /*ความสูง*/
+    border: none; /*ขอบไม่มี*/
+    border-radius: 10px; /*ความมนขอบ*/
+    border: 2px solid white; /*ขอบ*/
+    background-color: rgb(36, 36, 36); /*สีพื้นหลัง*/
+    color: white; /*สีอักษร*/
+
+}
+.btn-content:hover {
+    width: 140px; /*ความกว้าง*/
+    height: 40px; /*ความสูง*/
+    border: none; /*ขอบไม่มี*/
+    border-radius: 10px; /*ความมนขอบ*/
+    background-image: linear-gradient(to right, #9c20aa, #fb3570); /*พื้นหลังไล่สี*/
+    color: white; /*สีอักษร*/
+}
+

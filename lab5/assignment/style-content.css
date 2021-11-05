@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap'); /*import font*/
+
+* {
+    padding: 0; /*ความห่างขอบ*/
+    margin: 0; /*ความห่างขอบ*/
+    font-family: 'Open Sans', sans-serif; /*เรียกใช้ชุดตัวอักษร*/
+    text-decoration: none; /*ไม่ตกแต่งตัวอักษร*/
+    
+}
+
+body {
+    background-color: rgb(20, 20, 20); /*สีพื้นหลัง*/
+    background-size: cover;
+    height: 100vh;
+}
+
+nav {
+    /* nav bar */
+    background-color: rgb(0, 0, 0, 0.8); /*สีพื้นหลัง*/
+    width: 100vw; /*ความกว้าง*/
+    height: 70px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    top: 0;
+    position: fixed;
+    overflow: hidden;
+}
+nav i {
+    /* <i> ใน nav */
+    font-size: 40px;
+    float: left;
+    color: white;
+    padding: 20px 0 0 40px;
+}
+nav p {
+    /* <p> ใน nav */
+    font-size: 50px;
+    font-weight: bold;
+}
+section {
+    /* section ทั้งหมด */
+    display: inline-block;
+    padding: 10px 10px 20px 10px;
+    margin-left: 3%;
+    margin-right: auto;
+    
+}
+.box {
+    /* box ก่อนกดอ่าน */
+    width: 300px; /*ความกว้าง*/
+    height: 400px; /*ความสูง*/
+    margin-left: 30px;
+    margin-right: 30px;
+    color: white;
+    background-color: rgb(36, 36, 36);
+    height: 150px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    line-height: 20px;
+}
+h2 {
+    /* เฉพาะ <h2> */
+    font-size: 16px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+.button {
+    /* ปุ่ม ทุก div ที่ใช้คลาส button */
+    border-radius: 15px;
+    border: 2px solid white;
+    background-color: rgb(36, 36, 36);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.1s;
+}
+
+.button:hover {
+    /* ปุ่มตอนเมาส์แตะ */
+    width: 200px;
+    height: 80px;
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #9c20aa, #fb3570);
+    color: white; 
+}
+
+.overlay {
+    /*ปิด popup ให้มองไม่เห็น*/
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity .5s;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    /* แสดง popup */
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    /* ลักษณะของ popup ที่เปิดขึ้นมา */
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+.popup .close {
+    /* เมื่อปิด popup */
+    position: absolute;
+    top:20px;
+    right: 30px;
+    transition: all .2s;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+}
+.popup .close:hover {
+    /* เมื่อเอาเมาส์แตะ ปุ่ม close */
+    color: #fb3570;
+    transform:rotate(90deg);
+    transition: all 1s;
+}
+.popup .content {
+    /* ขนาดของหน้าต่าง popup */
+    max-height: 30%;
+    overflow: auto;
+}
+@media screen and (max-width: 700px){
+    .box{
+        width: 70%;
+    }
+    .popup{
+        width: 70%;
+    }
+}
+
+.img-popup {
+    /* <img> ใน popup */
+    margin: 10px auto;
+}
+
+p {
+    /* <p> ทั้งหมด */
+    text-indent: 30px; /*ย่อหน้า*/
+} 
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    width: 100vw;
+    height: 40px;
+    padding-top: 10px;
+}
+

@@ -1,0 +1,99 @@
+*{
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+*:focus {
+    outline: none;
+}
+
+.phonenum {
+    width: 30px;
+}
+
+.last {
+    margin-left:70px;
+}
+
+#fname {
+    width: 80px;
+}
+
+.mail, .port {
+    width: 200px;
+}
+
+.info {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+#position {
+    width: 150px;
+}
+
+.required:after {
+    content:" *";
+    color: red;
+  }
+
+table {
+    margin: 50px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px
+}
+
+td {
+    padding-left: 20px;
+}
+
+label {
+    line-height: 40px;
+}
+
+.btn {
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+input {
+    border:1px solid black;
+    border-radius: 20px;
+    padding: 7px 10px;
+}
+
+select {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 7px 10px;
+}
+
+span {
+    color: gray;
+}
+
+.btn2 {
+    /*margin-left: 20%;*/
+    width: 100px;
+    color: black;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    transition: .5s;
+    margin-left: 10%;
+}
+
+.btn2:hover {
+    background-color: black;
+    color: white;
+}
