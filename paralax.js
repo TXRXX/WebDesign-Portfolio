@@ -16,7 +16,10 @@ const raf = () => {
 			element.style.transform =  "translateX("+ -(window.scrollY) + "%)"
 		});
         ct.forEach((element, index) => {
-			element.style.transform =  "translateX("+ window.scrollY/10 +"%)"
+			// element.style.transform =  "translateX("+ -window.scrollY/10 +"%)"
+			if (window.scrollY < 0 ) {
+				// element.style.transform =  "translateX(0)"
+			}
 		});
 		didScroll = false;
 	}

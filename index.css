@@ -3,6 +3,8 @@
 * {
     font-family: 'IBM Plex Sans Thai', sans-serif;
     box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 body {
@@ -19,6 +21,7 @@ body {
     flex: 1;
     background-color: black;
     color: rgb(255, 255, 255);
+    overflow: hidden;
 }
 
 .top-right {
@@ -103,6 +106,7 @@ span {
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    box-sizing: border-box;
 }
 
 .content-impress {
@@ -147,30 +151,56 @@ span {
     align-items: center;
     font-size: 4rem;
     text-align: center;
-    transform: translateX(200%);
+    font-weight: 900;
+    /* transform: translateX(200%); */
+    /* overflow-x: hidden; */
 }
 
 sup {
     font-size: 2rem;
     vertical-align: 3rem;
+    font-weight: 300;
+    border-right: 3px solid white;
+    background-color: rgb(221, 201, 165);
+    animation: anim-type 1s infinite;
 }
 
 
 @media screen and (max-width: 400px) {
     .section-title {
+        /* width: 100%; */
         font-size: 3rem;
         line-height: 3rem;
     }
     .text-impress {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 0;
     }
-    .cool-text{
+    .name{
         font-size: 2rem;
+        background-color: rgb(221, 201, 165);
+        color: white;
+        border-right: 3px solid white;
+        animation: anim-type 1s infinite;
+        padding: 0 2px;
     }
     sup {
         display: none;
         /* font-size: 1rem; */
     }
+    .subject {
+        color: transparent;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: white;
+    }
+    
 }
 
+@keyframes anim-type {
+    0% {
+        border-right: 3px solid black;
+    }
+    50% {
+        border-right: 3px solid rgb(255, 255, 255);
+    }
+}
