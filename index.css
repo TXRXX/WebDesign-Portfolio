@@ -5,6 +5,7 @@
     box-sizing: border-box;
     user-select: none;
     -webkit-user-select: none;
+    overflow-x: hidden;
 }
 
 body {
