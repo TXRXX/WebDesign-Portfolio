@@ -5,7 +5,7 @@
     box-sizing: border-box;
     user-select: none;
     -webkit-user-select: none;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body {
@@ -169,24 +169,24 @@ sup {
 
 @media screen and (max-width: 400px) {
     .section-title {
-        /* width: 100%; */
+        /* width: 20%; */
         font-size: 3rem;
         line-height: 3rem;
     }
     .inside-text-impress {
+        padding: 0;
         font-size: 1.5rem;
     }
     .name{
-        font-size: 2rem;
-        background-color: rgb(221, 201, 165);
+        font-size: 1.5rem;
+        /* background-color: rgb(221, 201, 165); */
         color: white;
-        border-right: 3px solid white;
-        animation: anim-type 1s infinite;
+        /* animation: anim-type 1s infinite; */
         padding: 0 2px;
     }
     sup {
-        display: none;
-        /* font-size: 1rem; */
+        /* display: none; */
+        font-size: 1rem;
     }
     .subject {
         color: transparent;
@@ -197,6 +197,18 @@ sup {
 }
 
 @media screen and (max-width: 900px) {
+    .section-title {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .inside-text-impress {
+        font-size: 1.5rem;
+    }
+    .subject {
+        color: transparent;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: white;
+    }
     .inside-text-impress {
         font-size: 3rem;
     }
@@ -206,8 +218,23 @@ sup {
 }
 
 @media screen and (max-width: 1250px) {
+    .section-title {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    .inside-text-impress {
+        font-size: 1.5rem;
+    }
+    .subject {
+        color: transparent;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: white;
+    }
     .inside-text-impress {
         font-size: 3rem;
+    }
+    .cool-text {
+        font-size: 3.5rem;
     }
 }
 
