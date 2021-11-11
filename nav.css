@@ -229,7 +229,7 @@ nav .content .links {
     nav .content .links {
         display: block;
         position: fixed;
-        background: rgb(0, 0, 0, 0.6);
+        background: rgb(0, 0, 0, 0.85);
         height: 100%;
         width: 100%;
         top: 70px;

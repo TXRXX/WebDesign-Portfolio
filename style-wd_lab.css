@@ -114,7 +114,7 @@ body {
 
 @media screen and (max-width: 400px) {
     .header {
-        margin-top: 30%;
+        margin-top: 25%!important;
         font-size: 2rem;
     }
 

@@ -134,6 +134,12 @@ body {
     }
 }
 
+@media screen and (max-width: 400px) {
+    .profile-text {
+        font-size: 3.6rem !important;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .profile-text {
         font-size: 4rem;
@@ -148,3 +154,9 @@ body {
     }
 }
 
+@media screen and (max-width: 1250px) {
+    .profile-text {
+        font-size: 15rem;
+        padding-top: 15%;
+    }
+}

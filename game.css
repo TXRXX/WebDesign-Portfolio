@@ -73,3 +73,9 @@ body {
         height: auto;
     }
 }
+
+@media screen and (max-width: 1250px) {
+    .profile-text {
+        padding-top: 10%;
+    }
+}

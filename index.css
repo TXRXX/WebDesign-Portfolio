@@ -174,7 +174,7 @@ sup {
         line-height: 3rem;
     }
     .inside-text-impress {
-        padding: 0;
+        padding-top: 15%;
         font-size: 1.5rem;
     }
     .name{
@@ -193,10 +193,17 @@ sup {
         -webkit-text-stroke: 1px;
         -webkit-text-stroke-color: white;
     }
+    .text-impress {
+        width: 50%;
+        font-size: 0.2rem;
+    }
     
 }
 
 @media screen and (max-width: 900px) {
+    * {
+        overflow-x: hidden;
+    }
     .section-title {
         font-size: 3rem;
         line-height: 3rem;
@@ -221,17 +228,16 @@ sup {
     .section-title {
         font-size: 3rem;
         line-height: 3rem;
+        overflow: hidden;
     }
     .inside-text-impress {
         font-size: 1.5rem;
+        margin-top: 15%;
     }
     .subject {
         color: transparent;
         -webkit-text-stroke: 1px;
         -webkit-text-stroke-color: white;
-    }
-    .inside-text-impress {
-        font-size: 3rem;
     }
     .cool-text {
         font-size: 3.5rem;
