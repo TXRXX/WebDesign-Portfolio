@@ -3,9 +3,28 @@
 * {
     font-family: 'IBM Plex Sans Thai', sans-serif;
 }
+
+:root {
+    --primary-color: rgb(0, 0, 0);
+    --text: white;
+    --text-wheat: wheat;
+}
+
+[data-theme = "light"] {
+    --primary-color: white;
+    --text: black;
+    --text-wheat: rgb(34, 34, 34);
+}
+
 body {
-    background-color: black;
+    background-color: var(--primary-color);
     width: 100vw;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: .5s;
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 
 .wrapper-container {
@@ -45,7 +64,7 @@ body {
     justify-items: center;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--text);
     flex-direction: column;
 
 }

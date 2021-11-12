@@ -3,10 +3,30 @@
 * {
     font-family: 'IBM Plex Sans Thai', sans-serif;
 }
-body {
-    background-color: black;
-    width: 100vw;
+
+:root {
+    --primary-color: rgb(0, 0, 0);
+    --text: white;
+    --text-wheat: wheat;
 }
+
+[data-theme = "light"] {
+    --primary-color: white;
+    --text: black;
+    --text-wheat: rgb(34, 34, 34);
+}
+
+body {
+    background-color: var(--primary-color);
+    width: 100vw;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 
 .wrapper-container {
     display: flex;
@@ -53,8 +73,9 @@ body {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
     z-index: 2;
-    text-shadow: 0px 3.3rem 0 white, 0px 6.6rem 0 wheat;
+    text-shadow: 0px 3.6rem 0 var(--text), 0px 6.9rem 0 wheat;
     background-color: wheat;
+    transition: .5s;
 }
 
 .gogo {
@@ -69,7 +90,7 @@ body {
     font-weight: 900;
     color: black;
     background-color: wheat;
-    text-shadow: 0 3.8rem 0 white;
+    text-shadow: 0 3.8rem 0 var(--text);
     z-index: 2;
     left: 70%;
 }
@@ -93,7 +114,7 @@ body {
     color: transparent;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: wheat;
-    text-shadow:0px 4rem 0 white, 0 8rem 0 wheat;
+    text-shadow:0px 4rem 0 var(--text), 0 8rem 0 wheat;
 
 }
 
@@ -130,13 +151,13 @@ body {
         height: 2rem;
         font-size: 1.5rem;
         -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        text-shadow: 0px 1.5rem 0 white, 0px 3rem 0 wheat;
+        -webkit-text-stroke-color: var(--text);
+        text-shadow: 0px 1.5rem 0 var(--text), 0px 3rem 0 wheat;
     }
     .head2 {
         font-size: 1.5rem;
         height: 2rem;
-        text-shadow: 0 1.5rem 0 rgb(255, 255, 255);
+        text-shadow: 0 1.5rem 0 var(--text);
     }
     .head3 {
         font-size: 1.5rem;
@@ -148,7 +169,7 @@ body {
         font-size: 1.5rem;
         height: 2rem;
         -webkit-text-stroke-width: 1px;
-        text-shadow:0px 1.5rem 0 rgb(255, 255, 255), 0 3rem 0 wheat;
+        text-shadow:0px 1.5rem 0 var(--text), 0 3rem 0 wheat;
     }
     .lab {
         width: 60%;
@@ -167,13 +188,13 @@ body {
         height: 2rem;
         font-size: 1.5rem;
         -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        text-shadow: 0px 1.5rem 0 white, 0px 3rem 0 wheat;
+        -webkit-text-stroke-color: var(--text);
+        text-shadow: 0px 1.5rem 0 var(--text), 0px 3rem 0 wheat;
     }
     .head2 {
         font-size: 1.5rem;
         height: 2rem;
-        text-shadow: 0 1.5rem 0 rgb(255, 255, 255);
+        text-shadow: 0 1.5rem 0 var(--text);
     }
     .head3 {
         font-size: 1.5rem;
@@ -185,7 +206,7 @@ body {
         font-size: 1.5rem;
         height: 2rem;
         -webkit-text-stroke-width: 1px;
-        text-shadow:0px 1.5rem 0 rgb(255, 255, 255), 0 3rem 0 wheat;
+        text-shadow:0px 1.5rem 0 var(--text), 0 3rem 0 wheat;
     }
     .lab {
         width: 70%;
@@ -205,13 +226,13 @@ body {
         height: 2rem;
         font-size: 1.5rem;
         -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: white;
-        text-shadow: 0px 1.5rem 0 white, 0px 3rem 0 wheat;
+        -webkit-text-stroke-color: var(--text);
+        text-shadow: 0px 1.5rem 0 var(--text), 0px 3rem 0 wheat;
     }
     .head2 {
         font-size: 1.5rem;
         height: 2rem;
-        text-shadow: 0 1.5rem 0 rgb(255, 255, 255);
+        text-shadow: 0 1.5rem 0 var(--text);
     }
     .head3 {
         font-size: 1.5rem;
@@ -223,7 +244,7 @@ body {
         font-size: 1.5rem;
         height: 2rem;
         -webkit-text-stroke-width: 1px;
-        text-shadow:0px 1.5rem 0 rgb(255, 255, 255), 0 3rem 0 wheat;
+        text-shadow:0px 1.5rem 0 var(--text), 0 3rem 0 wheat;
     }
     .lab {
         width: 60%;

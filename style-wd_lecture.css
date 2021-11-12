@@ -3,15 +3,35 @@
 *{
     font-family: 'IBM Plex Sans Thai', sans-serif;
 }
-body {
-    background-color: black;
+
+:root {
+    --primary-color: rgb(0, 0, 0);
+    --text: white;
+    --text-wheat: wheat;
 }
+
+[data-theme = "light"] {
+    --primary-color: white;
+    --text: black;
+    --text-wheat: rgb(34, 34, 34);
+}
+
+body {
+    background-color: var(--primary-color);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: .5s;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
 
 .lecture-head {
     text-align: center;
     color: transparent;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: wheat;
+    -webkit-text-stroke-color: var(--text-wheat);
 }
 
 .container {
@@ -29,17 +49,22 @@ body {
     font-weight: 300;
 }
 .lab-text {
-    font-weight: 900;
+    font-weight: 500;
 }
 .frame {
     position: relative;
     width: 50%;
     text-align: center;
-    color: #ffffff;
+    color: var(--text);
     border: 2px solid wheat;
     border-radius: 60px;
     padding: 1.5% 0;
     margin: 2% auto;
+    transition: .5s;
+}
+
+.container a {
+    width: 50%;
 }
 
 .frame::after {
@@ -67,10 +92,18 @@ body {
         padding-top: 25%;
     }
     .cont {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
+
     .frame {
         padding: 1% 5%;
         margin: 5% auto;
     }
+}
+
+@media screen and (max-width:900px) {
+    .cont {
+        font-size: 1.4rem;
+    }
+    
 }
