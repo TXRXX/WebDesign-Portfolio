@@ -1,6 +1,6 @@
 let btn = document.querySelector(".fa-moon");
 let isDark = true;
-let text = document.querySelector(".theme-text");
+// let text = document.querySelector(".theme-text");
 
 
 btn.addEventListener("click", function(){
@@ -9,7 +9,7 @@ btn.addEventListener("click", function(){
         document.documentElement.setAttribute("data-theme", "light");
         btn.classList.remove("fa-moon");
         btn.classList.add("fa-sun");
-        text.textContent = "LIGHT MODE";
+        // text.textContent = "LIGHT MODE";
 
     }
     else {
@@ -17,7 +17,7 @@ btn.addEventListener("click", function(){
         document.documentElement.setAttribute("data-theme", "dark");
         btn.classList.remove("fa-sun");
         btn.classList.add("fa-moon");
-        text.textContent = "DARK MODE";
+        // text.textContent = "DARK MODE";
         
     }
     isDark = !isDark
@@ -30,7 +30,7 @@ if (currentTheme === "dark") {
     isDark = true;
     btn.classList.remove("fa-sun");
     btn.classList.add("fa-moon"); 
-    text.textContent = "DARK MODE";
+    // text.textContent = "DARK MODE";
 }
 else if (currentTheme === "light"){
     localStorage.setItem("theme", "light");
@@ -38,6 +38,6 @@ else if (currentTheme === "light"){
     isDark = false;
     btn.classList.remove("fa-moon");
     btn.classList.add("fa-sun");
-    text.textContent = "LIGHT MODE";
+    // text.textContent = "LIGHT MODE";
 
 }
